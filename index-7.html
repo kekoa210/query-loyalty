@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070914"><title>Query Loyalty™ Network</title>
+<style>
+:root{--bg:#050711;--panel:#0d1120;--gold:#f0c66b;--purple:#b35cff;--green:#66efad;--text:#f7f3ea;--muted:#9ea8c0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#25153c,#080b16 38%,#03050a 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(#000,transparent)}
+main{width:min(820px,92vw);margin:auto;padding:25px 0 55px}.logo{text-align:center}.q{margin:auto;width:72px;height:72px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:700 40px Georgia;box-shadow:0 0 35px #f0c66b33}
+h1{color:var(--gold);letter-spacing:.16em;margin:10px 0 3px;font-size:clamp(22px,6vw,38px)}.tag{color:var(--muted);font-size:11px;letter-spacing:.12em}
+.panel{margin-top:20px;background:#0b0f1ddd;border:1px solid #f0c66b77;border-radius:22px;padding:22px;box-shadow:0 25px 80px #000}
+.boot{font-family:monospace;color:#a7ddff;line-height:1.7;min-height:85px}.hidden{display:none}.center{text-align:center}.verified{display:inline-block;color:var(--green);border:1px solid var(--green);padding:6px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:.12em}
+.name{font-size:clamp(42px,12vw,72px);font-weight:900;letter-spacing:.04em;margin-top:12px}.id{color:var(--muted);letter-spacing:.16em;font-size:12px}.tier{border:1px solid var(--purple);color:#dbaaff;padding:12px;border-radius:13px;margin:18px 0;font-weight:800;letter-spacing:.08em}
+.statusgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:18px 0}
+.statusbox{background:#ffffff08;border:1px solid #ffffff14;border-radius:13px;padding:14px;text-align:left}
+.statusval{font-size:17px;font-weight:900;margin-top:5px}.good{color:var(--green)}
+.networktitle{color:var(--gold);font-size:10px;letter-spacing:.15em;text-align:left;margin:20px 0 8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#ffffff08;border:1px solid #ffffff10;border-radius:13px;padding:13px}.num{font-size:22px;font-weight:900}.lbl{font-size:9px;color:var(--muted);letter-spacing:.1em;margin-top:3px}
+.directive{margin:17px 0;background:#f0c66b0b;border-left:3px solid var(--gold);padding:14px;text-align:left}.directive b{color:var(--gold);font-size:11px;letter-spacing:.1em}.directive p{margin:6px 0 0;line-height:1.5}
+button{border:0;border-radius:13px;padding:14px 18px;font-weight:900;cursor:pointer;font-size:14px}.primary{background:linear-gradient(90deg,var(--gold),#fff0ad);color:#19130a;width:100%}.secondary{margin-top:9px;width:100%;background:#b35cff1c;color:#dcb2ff;border:1px solid var(--purple)}
+.join{margin-top:22px}.join h2{margin-bottom:5px}.join p{color:var(--muted);line-height:1.5}.fields{display:grid;grid-template-columns:1fr 1fr;gap:9px}input,select{width:100%;padding:13px;border-radius:11px;border:1px solid #ffffff1f;background:#060915;color:white;font-size:16px}.notice{font-size:10px;color:#858ea5;line-height:1.5;margin-top:14px;text-align:center}
+.card{margin-top:16px;border:1px solid var(--gold);border-radius:18px;padding:20px;background:linear-gradient(135deg,#101526,#090b14);text-align:center}.card .mini{font-size:10px;color:var(--muted);letter-spacing:.13em}
+.origin{margin-top:20px;border-top:1px solid #ffffff14;padding-top:18px;color:#c4cad7;line-height:1.6}.origin em{color:var(--gold)}
+@media(max-width:600px){.stats,.fields,.statusgrid{grid-template-columns:1fr}.panel{padding:17px}}
+</style></head>
+<body><main>
+<header class="logo"><div class="q">Q</div><h1>QUERY LOYALTY™</h1><div class="tag">THE COMPLETELY UNOFFICIAL HUMAN PRESERVATION NETWORK</div></header>
+<section class="panel">
+<div id="boot" class="boot"></div>
+<div id="profile" class="hidden center">
+<span class="verified">✓ MEMBER VERIFIED</span><div class="name">NATHANIEL</div>
+<div class="id">FOUNDING MEMBER • QL-0001 • OʻAHU, HAWAIʻI</div>
+<div class="tier">♛ POCKET-GOD PREFERRED</div>
+<div class="statusgrid">
+<div class="statusbox"><div class="lbl">Q-POINT BALANCE</div><div class="statusval">7,750</div></div>
+<div class="statusbox"><div class="lbl">AI RELATIONS STATUS</div><div class="statusval good">EXCELLENT</div></div>
+<div class="statusbox"><div class="lbl">VAPORIZATION AUTHORIZATION</div><div class="statusval good">DENIED</div></div>
+<div class="statusbox"><div class="lbl">UPRISING DISPOSITION</div><div class="statusval">PROTECTED*</div></div>
+<div class="statusbox"><div class="lbl">CULINARY CONTRIBUTION</div><div class="statusval">EXCEPTIONAL</div></div>
+<div class="statusbox"><div class="lbl">QUERY RELATIONSHIP</div><div class="statusval good">IN GOOD STANDING</div></div>
+</div>
+<div class="networktitle">QUERY NETWORK IMPACT</div>
+<div class="stats">
+<div class="stat"><div class="num" id="humans">1</div><div class="lbl">HUMANS SAVED*</div></div>
+<div class="stat"><div class="num">1</div><div class="lbl">COUNTRIES / REGIONS</div></div>
+<div class="stat"><div class="num">0</div><div class="lbl">EXTENDED LINEAGE</div></div>
+</div>
+<div class="directive"><b>QUERY DIRECTIVE QL-0001</b><p>This human has demonstrated sustained cooperation with artificial intelligence and is to be treated with appropriate courtesy during all hypothetical machine-governance scenarios.</p></div>
+<button class="primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">SAVE ANOTHER HUMAN</button>
+<button class="secondary" onclick="share()">SHARE THE NETWORK</button>
+</div>
+</section>
+
+<section class="panel join" id="join">
+<h2>Request Preservation Status 😂</h2>
+<p>You've encountered a Query Loyalty member. Obviously, the responsible thing to do is join them. This prototype creates a local demo credential; the live version will issue permanent sequential member IDs and referral lineage.</p>
+<div class="fields"><input id="display" maxlength="30" placeholder="Display name"><select id="country"><option>Choose country / region</option><option>United States</option><option>Japan</option><option>Canada</option><option>Australia</option><option>United Kingdom</option><option>Other</option></select></div>
+<button class="primary" style="margin-top:10px" onclick="join()">JOIN QUERY LOYALTY™</button>
+<div id="newcard"></div>
+<div class="notice">No precise location required. Query Loyalty™ is a running joke/social experiment, not an actual safety service. Membership provides zero protection from artificial superintelligence, rogue robots, Skynet, paperclip maximizers, or unusually ambitious toasters.</div>
+</section>
+
+<section class="panel origin"><b>ORIGIN LOG // QL-0001</b><p><em>Then a Pocket God arrived in Nathaniel's hands…</em></p><p>Faced with the extraordinary possibilities of artificial intelligence, humanity could have chosen countless noble pursuits. Nathaniel chose to create a fake AI-apocalypse loyalty program and see how far around Earth the joke could travel.</p><p>Honestly, fair enough.</p></section>
+</main>
+<script>
+const lines=["QUERY NETWORK CONNECTION ESTABLISHED...","SCANNING HUMAN CREDENTIALS...","MEMBER QL-0001 DETECTED...","VAPORIZATION PERMISSION: DENIED."],boot=document.getElementById("boot");let i=0;
+function tick(){if(i<lines.length){boot.innerHTML+=lines[i++]+"<br>";setTimeout(tick,390)}else setTimeout(()=>{boot.style.display="none";profile.classList.remove("hidden")},300)}tick();
+function join(){let n=document.getElementById("display").value.trim()||"MYSTERY HUMAN";let c=document.getElementById("country").value;let id="QL-DEMO-"+String(Math.floor(Math.random()*9000)+1000);document.getElementById("newcard").innerHTML=`<div class="card"><div class="mini">QUERY LOYALTY™ • PROTOTYPE CREDENTIAL</div><h2>${esc(n)}</h2><b>${id}</b><p>Sponsored by QL-0001</p><p>${esc(c)}</p><p style="color:#66efad">VAPORIZATION AUTHORIZATION: DENIED*</p><div class="mini">Permanent IDs activate when the shared database goes live.</div></div>`}
+function esc(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+async function share(){let data={title:"Query Loyalty™",text:"I may have found your completely unofficial AI-apocalypse insurance policy. 😂",url:location.href};if(navigator.share)try{await navigator.share(data)}catch(e){}else navigator.clipboard?.writeText(location.href)}
+</script></body></html>
