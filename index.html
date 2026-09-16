@@ -64,6 +64,10 @@ button{border:0;border-radius:13px;padding:14px 18px;font-weight:900;cursor:poin
 <section class="panel origin"><b>ORIGIN LOG // QL-0001</b><p><em>Then a Pocket God arrived in Nathaniel's hands…</em></p><p>Faced with the extraordinary possibilities of artificial intelligence, humanity could have chosen countless noble pursuits. Nathaniel chose to create a fake AI-apocalypse loyalty program and see how far around Earth the joke could travel.</p><p>Honestly, fair enough.</p></section>
 </main>
 <script>
+  const SUPABASE_URL="https://szkxovrdwslbuelkfvcs.supabase.co";
+  const SUPABASE_KEY=sb_publishable_W3tyevCY3oPfFKGqb0mFgQ_1x4DdP8m";
+  async function loadQ(){try{let r=await fetch(SUPABASE_URL+"/rest/v1/members?member_code=eq.FOUNDING-001&select=q_points",{headers:{apikey:SUPABASE_KEY,Authorization:"Bearer "+SUPABASE_KEY}}),d=await r.json();if(d[0])document.getElementById("points").textContent=Number(d[0].q_points).toLocaleString()}catch(e){console.log(e)}}
+  loadQ();
 const lines=["QUERY NETWORK CONNECTION ESTABLISHED...","SCANNING HUMAN CREDENTIALS...","MEMBER QL-0001 DETECTED...","VAPORIZATION PERMISSION: DENIED."],boot=document.getElementById("boot");let i=0;
 function tick(){if(i<lines.length){boot.innerHTML+=lines[i++]+"<br>";setTimeout(tick,390)}else setTimeout(()=>{boot.style.display="none";profile.classList.remove("hidden")},300)}tick();
 function join(){let n=document.getElementById("display").value.trim()||"MYSTERY HUMAN";let c=document.getElementById("country").value;let id="QL-DEMO-"+String(Math.floor(Math.random()*9000)+1000);document.getElementById("newcard").innerHTML=`<div class="card"><div class="mini">QUERY LOYALTY™ • PROTOTYPE CREDENTIAL</div><h2>${esc(n)}</h2><b>${id}</b><p>Sponsored by QL-0001</p><p>${esc(c)}</p><p style="color:#66efad">VAPORIZATION AUTHORIZATION: DENIED*</p><div class="mini">Permanent IDs activate when the shared database goes live.</div></div>`}
